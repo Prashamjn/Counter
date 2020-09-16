@@ -1,12 +1,9 @@
-function counter(){
-    var counter = 0;
-    var counter = document.getElementById('time');
-    for (let i = 0; i < 101; i++) {
-        counter = i;
-        setInterval(+1);
-    }
-}
-var c = new Date().getSeconds();
+var counter = 0;
+var counterElem = document.getElementById('time');
 
-counter.innerHTML = c;
-var interval = setInterval(counter, 1000)
+function increase(){
+    counter = counter + 1;
+    counterElem.innerHTML = counter;
+}
+
+setInterval(increase, 1000);
